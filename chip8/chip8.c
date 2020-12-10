@@ -1,7 +1,7 @@
 /**
  * @file chip8.c
  *
- * @author David Matlack
+ * @author Elias Taylor
  */
 #include "chip8.h"
 
