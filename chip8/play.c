@@ -211,13 +211,6 @@ void paint_cell(int row, int col, int32_t color) {
 void draw() {
     int row, col;
     int colf; //collumn flipped
-    // Clear framebuffer
-    //glClear(GL_COLOR_BUFFER_BIT);
-    //Graphics_ClearScreen
-    // Draw pixels to the buffer
-    //Graphics_clearDisplay(&g_sContext);
-
-
     //delay(50);
     for (row = 0; row < GFX_ROWS; row++) {
         for (col = 0; col < GFX_COLS; col++) {
@@ -237,25 +230,10 @@ void draw() {
             }
         }
     Graphics_flushBuffer(&g_sContext);
-    //g_sContext = g_sContextf;
-    //Crystalfontz128x128_Init();
-    //Crystalfontz128x128_SetOrientation(LCD_ORIENTATION_LEFT);
-    // Initialize context
-    //Graphics_initContext(&g_sContext, &g_sCrystalfontz128x128,&g_sCrystalfontz128x128_funcs);
-    //Graphics_setForegroundColor(&g_sContext, GRAPHICS_COLOR_WHITE);
-    //Graphics_setBackgroundColor(&g_sContext, GRAPHICS_COLOR_BLACK);
-
-    // Update Texture
-    //glDrawPixels(SCREEN_COLS, SCREEN_ROWS, GL_RGB, GL_UNSIGNED_BYTE,
-                 //(void *) screen);
-    //glutSwapBuffers();
 }
 
 void loop() {
 
-    //Timer32_haltTimer (TIMER32_0_BASE);
-    //Timer32_setCount  (TIMER32_0_BASE, 48 * 17166.6666667);
-    //Timer32_startTimer(TIMER32_0_BASE, true);
 
     chip8_emulatecycle();
 
@@ -263,8 +241,6 @@ void loop() {
         draw();
         chip8_draw_flag = false;
     }
-    //delay(17.666);
-    //chip8_tick();
 
     if(Timer32_getValue(TIMER32_0_BASE) <= 0){
         chip8_tick();
@@ -273,9 +249,6 @@ void loop() {
         Timer32_startTimer(TIMER32_0_BASE, true);
 
     }
-    //delay(50);
-    //chip8_tick();
-
 
 }
 
@@ -298,46 +271,6 @@ void Init_Graph(Graphics_Context *g_sContext_f)
     Graphics_clearDisplay(g_sContext_f);
     memset(gfx2,    0, sizeof(uint8_t)  * GFX_SIZE);
 }
-/*
-int main(int argc, char **argv) {
-
-    if (argc != 2) {
-        fprintf(stderr, "Usage: ./play <game>\n");
-        exit(2);
-    }
-
-    // Setup Chip8
-    chip8_initialize();
-    chip8_loadgame(argv[1]);
-
-    // Setup OpenGL
-    glutInit(&argc, argv);          
-    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA);
- 
-    glutInitWindowSize(SCREEN_COLS, SCREEN_ROWS);
-    glutInitWindowPosition(0, 0);
-    glutCreateWindow("chip8");
- 
-    glutDisplayFunc(draw);
-    glutIdleFunc(loop);
-    glutReshapeFunc(reshape_window);
-
-    glutKeyboardFunc(keypress);
-    glutKeyboardUpFunc(keyrelease);
-
-    gfx_setup();
-
-    Timer32_setCount(TIMER32_0_BASE,20*3*1000000);//3 cycle per microsec
-    Timer32_startTimer(TIMER32_0_BASE, true);
-    clock_prev.tv_msec = (Timer32_getValue(TIMER32_0_BASE)/3000)%1000;
-    clock_prev.tv_sec = Timer32_getValue(TIMER32_0_BASE)/3000000;
- 
-    // Run the emulator
-    glutMainLoop();  
-
-    return 0;
-}
-*/
 void initDelay(void) {
     Timer32_initModule(TIMER32_0_BASE, TIMER32_PRESCALER_1, TIMER32_32BIT, TIMER32_PERIODIC_MODE);
     Timer32_disableInterrupt(TIMER32_0_BASE);
