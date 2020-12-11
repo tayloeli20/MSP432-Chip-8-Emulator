@@ -1,7 +1,7 @@
 /**
  * @file chip8.h
  *
- * @author David Matlack
+ * @author Elias Taylor
  */
 #ifndef __CHIP8_H__
 #define __CHIP8_H__
