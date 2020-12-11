@@ -15,5 +15,4 @@ The program is configured with them game so that spaceinvaders is the first game
 
 * No-RTOS
   * Clock System is configured with MCLK = 48 MHz.
-  * 
   
