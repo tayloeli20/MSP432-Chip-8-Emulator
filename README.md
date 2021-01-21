@@ -9,7 +9,7 @@ This program requires the [Educational BoosterPack MKII (BOOSTXL-EDUMKII)](http:
 
 ## Example Usage
 
-The program is configured with them game so that spaceinvaders is the first game booted up, change the game by editing the loadgame function, in fact since the file system is gonna be different on your computer, make sure to configure it the path to your file system. Games will run but you might need to edit the controls for your specific game. Off the bat space invders, astro dodge and breakout will work without configuration.
+You will need to change the file "chip8.c" in the loadgame portion of the script to your specific file system. The program is configured with the game so that spaceinvaders is the first game booted up, change the game by editing the loadgame function. Games will run but you might need to edit the controls for your specific game. Off the bat space invders, astro dodge and breakout will work without configuration. 
 
 ## Application Design Details
 
