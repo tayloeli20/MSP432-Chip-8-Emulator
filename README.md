@@ -8,7 +8,7 @@ the MSP432 sends data to the LCD's controller through SPI communication to displ
 This program requires the [Educational BoosterPack MKII (BOOSTXL-EDUMKII)](http://www.ti.com/tool/BOOSTXL-EDUMKII) paired with the MSP-EXP432P401R LaunchPad
 
 ## Example Usage
-![Alt Text](https://i.imgur.com/5rwbFMQ.mp4)
+![Alt Text](https://media.giphy.com/media/q1zHCQzZOycj0d6X7J/giphy-downsized-large.gif)
 
 
 
