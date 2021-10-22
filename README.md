@@ -8,6 +8,9 @@ the MSP432 sends data to the LCD's controller through SPI communication to displ
 This program requires the [Educational BoosterPack MKII (BOOSTXL-EDUMKII)](http://www.ti.com/tool/BOOSTXL-EDUMKII) paired with the MSP-EXP432P401R LaunchPad
 
 ## Example Usage
+![Alt Text](https://i.imgur.com/5rwbFMQ.mp4)
+
+
 
 You will need to change the file "play.c" in the loadgame portion of the script to your specific file system. The program is configured with the game so that spaceinvaders is the first game booted up, change the game by editing the loadgame function. Games will run but you might need to edit the controls for your specific game. Off the bat space invders, astro dodge and breakout will work without configuration. 
 
