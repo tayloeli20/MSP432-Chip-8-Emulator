@@ -1,5 +1,5 @@
 ## Example Summary
-The goal of this project was to create a CHIP-8 gamesystem using the Texas Instruments MSP432 microcontroller.
+The goal of this project was to create a CHIP-8 gamesystem using the Texas Instruments MSP432 microcontroller, so that any Chip-8 game could run on this device.
 We would start by using the Texas Instruments Educational BoosterPack MII as the user interface for our game system.
 The game is displayed on the BoosterPack's colored 128x128 matrix LCD. Using MSP Graphics Library, 
 the MSP432 sends data to the LCD's controller through SPI communication to display the data.
