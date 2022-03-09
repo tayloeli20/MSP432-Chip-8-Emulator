@@ -1,8 +1,8 @@
 ## Example Summary
 The goal of this project was to create a CHIP-8 gamesystem using the Texas Instruments MSP432 microcontroller, so that any Chip-8 game could run on this device.
-We would start by using the Texas Instruments Educational BoosterPack MII as the user interface for our game system.
+We started by using the Texas Instruments Educational BoosterPack MII as the user interface for our game system.
 The game is displayed on the BoosterPack's colored 128x128 matrix LCD. Using MSP Graphics Library, 
-the MSP432 sends data to the LCD's controller through SPI communication to display the data.
+the MSP432 sends data to the LCD's controller through SPI communication to render the game.
 ## BoosterPack Requirements
 
 This program requires the [Educational BoosterPack MKII (BOOSTXL-EDUMKII)](http://www.ti.com/tool/BOOSTXL-EDUMKII) paired with the MSP-EXP432P401R LaunchPad
